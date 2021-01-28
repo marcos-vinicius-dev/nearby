@@ -44,7 +44,7 @@ v-card(class="shadow-card")
             v-btn(
               icon
               target="_blank"
-              :href="`https://search.google.com/local/writereview?placeid=${place.place_id}`"
+              :href="`/local/writereview?placeid=${place.place_id}`"
             )
               v-icon
                 | mdi-comment-edit-outline

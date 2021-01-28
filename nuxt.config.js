@@ -56,8 +56,8 @@ export default {
   proxy: {
     // Simple proxy
     '/api': 'https://reqres.in',
-    '/maps': 'https://maps.googleapis.com',
-    '/local': 'https://search.google.com'
+    '/maps': { target: 'https://maps.googleapis.com', changeOrigin: true },
+    '/local': { target: 'https://search.google.com', changeOrigin: true }
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -79,7 +79,9 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
