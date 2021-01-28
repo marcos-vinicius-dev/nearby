@@ -14,20 +14,18 @@ VeeValidate
 
 - [x] Login
 - [x] Cadastro
-- [x] Visualizacao de perfil
-- [x] Editar perfil
-- [ ] Logout
-- [ ] Lista de locais proximos
-- [ ] Mapa com lugares proximos
-- [ ] Salvar locais em favoritos
-- [ ] Avaliar locais (rating e comentario)
-- [ ] Components
-- [ ] Tratamento de cenários de erros (login incorreto, e-mail e local já existentes, campos
-obrigatórios, sem conexão com internet, etc)
-- [ ] O app web deve ser implementado preferencialmente em Vue.js (ou framework
-semelhante);
-- [ ] O deployment da aplicação deve ser realizado no Heroku (ou semelhante);
-- [ ] O código da aplicação deve ser disponibilizado em um repositório do Github;
+- [x] Visualização de perfil - Editar perfil
+- [x] Logout
+- [x] Lista de locais próximos
+- [x] Mapa com lugares próximos
+- [x] Salvar locais em favoritos
+- [x] Avaliar locais (rating e comentário) Obs: O Google maps não disponibiliza uma api para esta ação.
+- [x] Tratamento de cenários de erros (login incorreto, e-mail e local já existentes, campos obrigatórios)
+- [x] O app web deve ser implementado preferencialmente em Vue.js
+- [x] Integração Google maps
+- [x] Integração REQ|RES
+- [x] O deployment da aplicação deve ser realizado no Heroku
+- [x] O código da aplicação deve ser disponibilizado em um repositório do Github
 
 ## Build Setup
 
