@@ -9,7 +9,9 @@ Este é um projeto Frontend para Zro Bank, ele conta com a [Api Req | Res](https
 ##  Arquitetura
 
 O projeto é um SPA construído com [Nuxt.js](https://nuxtjs.org/).
+
 Biblioteca de IU utilizada foi [Vuetify](https://vuetifyjs.com/en/).
+
 Sistema de componentes utiliza a metodologia [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
 ###  Estrutura de Pastas
