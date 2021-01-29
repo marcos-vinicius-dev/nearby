@@ -75,6 +75,8 @@ Os **commits** do **Git** seguem as [mensagens de commit semântico](https://gis
 
 [Vue Toasted](https://github.com/shakee93/vue-toasted) Notificações
 
+[Lodash](https://lodash.com/) Uma biblioteca de utilitários JavaScript
+
 
 ##  Objetivos
 
