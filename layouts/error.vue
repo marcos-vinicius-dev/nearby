@@ -1,20 +1,7 @@
-<template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
-</template>
-
 <script>
 export default {
-  layout: 'empty',
+  layout: 'auth',
+
   props: {
     error: {
       type: Object,
@@ -36,6 +23,19 @@ export default {
   }
 }
 </script>
+
+<template lang="pug">
+v-app(dark)
+  h1(v-if="error.statusCode === 404")
+    | {{ pageNotFound }}
+
+  h1(v-else)
+    | {{ otherError }}
+
+  div(to='/')
+    | Home page
+
+</template>
 
 <style scoped>
 h1 {
