@@ -66,10 +66,16 @@ Os **commits** do **Git** seguem as [mensagens de commit semântico](https://gis
 ###  Plugins utilizados e recursos
 
 [VeeValidate](https://vee-validate.logaretm.com/v3) Estrutura de validação de formulário baseada em modelo para Vue.js
+
 [js-cookie](https://github.com/js-cookie/js-cookie) Uma API para lidar com cookies
+
 [cookie-parser](https://github.com/expressjs/cookie-parser#readme)
+
 [vuex-persist](https://github.com/championswimmer/vuex-persist#readme) Permite que você salve o estado do seu aplicativo em um armazenamento persistente como Cookies ou localStorage
+
 [Vue Toasted](https://github.com/shakee93/vue-toasted) Notificações
+
+
 ##  Objetivos
 
 - [x] Login
