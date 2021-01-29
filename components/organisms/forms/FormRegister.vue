@@ -2,6 +2,7 @@
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 
 import ApiRegister from '@/components/api/register'
+import FiedlPassword from '@/components/molecules/fields/FieldPassword.vue'
 
 const Cookie = process.client ? require('js-cookie') : undefined
 
@@ -10,13 +11,13 @@ export default {
 
   components: {
     ApiRegister,
+    FiedlPassword,
     ValidationObserver,
     ValidationProvider
   },
 
   data () {
     return {
-      showPass: false,
       formData: {
         email: '',
         password: ''
@@ -71,17 +72,15 @@ api-register(
         validation-provider(
           class="col-12 py-0"
           name="senha"
-          rules="required"
+          placeholder="senha"
           v-slot="{ errors }"
+          rules="required"
         )
-          v-text-field(
+          FiedlPassword(
             autocomplete="password"
             label="Password"
             v-model="formData.password"
-            :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
             :error-messages="errors"
-            :type="showPass ? 'text' : 'password'"
-            @click:append="showPass = !showPass"
           )
 
         v-col(cols="12")
