@@ -3,7 +3,7 @@
 
 #  Projeto de avaliação
 
-Este é um projeto para o Athon Tech , ele consome dados de uma API REST que apresenta dados criminais para um agente da lei.
+Este é um projeto Frontend para Zro Bank, ele conta com a [Api Req | Res](https://reqres.in/) para implementação do Login, Cadastro e Perfil do usuário. Apresenta também uma pesquisa de locais próximos ao usuário, retornando esses locais em formato de mapa e lista [Google Places Api](https://cloud.google.com/maps-platform/places/).
 
 
 ##  Arquitetura
@@ -14,20 +14,23 @@ Sistema de componentes utiliza a metodologia [Atomic Design](https://bradfrost.c
 
 ###  Estrutura de Pastas
 
-- src/
-- assets `recursos dinâmicos (processado pelo webpack)`
-- boot `arquivos de inicialização`
+- assets `ativos não compilados (processado pelo webpack)`
+	- css `definições de estilo (Scss)`
 - components/ `componentes do aplicativo`
-- api `componentes responsaveis pela comunicação com a api`
-- atoms `Atomic Design`
-- molecules `Atomic Design`
-- organisms `Atomic Design`
-- css `definições de estilo (Scss)`
+	- api `componentes responsaveis pela comunicação com a api`
+	- atoms `Atomic Design`
+	- molecules `Atomic Design`
+	- organisms `Atomic Design`
 - helpers `funções auxiliares`
 - layouts `elementos que envolvem o conteúdo da página`
+- middleware `funções personalizadas que podem ser executadas antes de renderizar uma página ou um grupo de páginas (layouts).`
 - mixins `funcionalidade reutilizável`
 - pages `paginas da aplicação`
-- router `Rotas da aplicação - Vue Router`
+- plugins `plug-ins JavaScript que você deseja executar antes de instanciar o aplicativo raiz Vue.js`
+- static `ativos estáticos`
+- store `vuex Store`
+- .env `variáveis globais`
+- nuxt.config.js `configurações do nuxt`
 
 
 ##  Configurações do Projeto
@@ -61,8 +64,10 @@ Os **commits** do **Git** seguem as [mensagens de commit semântico](https://gis
 ###  Plugins utilizados e recursos
 
 [VeeValidate](https://vee-validate.logaretm.com/v3) Estrutura de validação de formulário baseada em modelo para Vue.js
-
-
+[js-cookie](https://github.com/js-cookie/js-cookie) Uma API para lidar com cookies
+[cookie-parser](https://github.com/expressjs/cookie-parser#readme)
+[vuex-persist](https://github.com/championswimmer/vuex-persist#readme) Permite que você salve o estado do seu aplicativo em um armazenamento persistente como Cookies ou localStorage
+[Vue Toasted](https://github.com/shakee93/vue-toasted) Notificações
 ##  Objetivos
 
 - [x] Login
