@@ -75,7 +75,7 @@ api-login(
         validation-provider(
           class="col-12 py-0"
           name="senha"
-          placeholder="cityslicka"
+          placeholder="senha"
           v-slot="{ errors }"
           rules="required"
         )

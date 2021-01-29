@@ -18,8 +18,8 @@ export default {
     return {
       showPass: false,
       formData: {
-        email: 'eve.holt@reqres.in',
-        password: 'cityslicka'
+        email: '',
+        password: ''
       }
     }
   },
