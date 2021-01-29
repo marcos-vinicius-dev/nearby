@@ -26,7 +26,7 @@ Sistema de componentes utiliza a metodologia [Atomic Design](https://bradfrost.c
 - helpers `funções auxiliares`
 - layouts `elementos que envolvem o conteúdo da página`
 - middleware `funções personalizadas que podem ser executadas antes de renderizar uma página ou um grupo de páginas (layouts).`
-- mixins `funcionalidade reutilizável`
+- mixins `funcionalidades reutilizáveis`
 - pages `paginas da aplicação`
 - plugins `plug-ins JavaScript que você deseja executar antes de instanciar o aplicativo raiz Vue.js`
 - static `ativos estáticos`
