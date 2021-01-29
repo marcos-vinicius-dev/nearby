@@ -28,8 +28,7 @@ export default {
         latLng: null,
         radius: '5',
         search: null
-      },
-      location: null
+      }
     }
   },
 
@@ -76,7 +75,11 @@ api-search(
   )
     form(@submit.prevent="handleSubmit(__submitManual)")
       v-row
-        field-location
+        field-location(
+          class="col-12 py-0"
+          validation-name="localização"
+          validation-rules="required"
+        )
 
         validation-provider(
           class="col-6 py-0"

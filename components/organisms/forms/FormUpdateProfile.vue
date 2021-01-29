@@ -1,6 +1,7 @@
 <script>
 import ApiProfile from '@/components/api/profile.js'
 import ApiUpdateProfile from '@/components/api/updateProfile.js'
+import FieldEmail from '@/components/molecules/fields/FieldEmail.vue'
 
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 
@@ -10,6 +11,7 @@ export default {
   components: {
     ApiProfile,
     ApiUpdateProfile,
+    FieldEmail,
     ValidationObserver,
     ValidationProvider
   },
@@ -74,18 +76,14 @@ api-profile(
       form(@submit.prevent="handleSubmit(submit)")
         v-row
 
-          validation-provider(
+          field-email(
             class="col-12 py-0"
-            name="email"
-            rules="required|email"
-            v-slot="{ errors }"
+            label="E-mail"
+            placeholder="eve.holt@reqres.in"
+            validation-name="email"
+            validation-rules="required|email"
+            v-model="formData.email"
           )
-            v-text-field(
-              autocomplete="email"
-              label="E-mail"
-              v-model="formData.email"
-              :error-messages="errors"
-            )
 
           validation-provider(
             class="col-12 py-0"

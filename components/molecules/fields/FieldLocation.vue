@@ -1,13 +1,16 @@
 <script>
-import { ValidationObserver, ValidationProvider } from 'vee-validate'
+import FieldMixin from '@/mixins/fields.js'
+
+import { ValidationProvider } from 'vee-validate'
 
 export default {
   name: 'FieldLocation',
 
   components: {
-    ValidationObserver,
     ValidationProvider
   },
+
+  mixins: [FieldMixin],
 
   data () {
     return {
@@ -18,6 +21,25 @@ export default {
   },
 
   computed: {
+    attrsField () {
+      return {
+        ...this.$attrs,
+        autocomplete: this.$attrs.autocomplete || 'email'
+      }
+    },
+
+    propsField () {
+      return {
+        ...this.$props
+      }
+    },
+
+    propsValidation () {
+      return {
+        ...this.validationProps
+      }
+    },
+
     lat: {
       get () {
         return this.$store.state.maps.location.lat
@@ -26,6 +48,7 @@ export default {
         this.$store.commit('maps/setLat', v)
       }
     },
+
     lng: {
       get () {
         return this.$store.state.maps.location.lng
@@ -76,16 +99,15 @@ export default {
 
 <template lang="pug">
 validation-provider(
-  class="col-12 py-0"
-  name="localização"
-  rules="required"
+  v-bind="propsValidation"
   v-slot="{ errors }"
 )
   v-text-field(
-    persistent-hint
-    label="Localidade"
     ref="locationTextField"
+    v-bind="propsField"
     v-model="formData.address"
+    v-on="$listeners"
+    :attrs="attrsField"
     :error-messages="errors"
   )
 

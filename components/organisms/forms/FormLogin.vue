@@ -5,7 +5,8 @@ import {
 } from 'vee-validate'
 
 import ApiLogin from '@/components/api/login.js'
-import FiedlPassword from '@/components/molecules/fields/FieldPassword.vue'
+import FieldEmail from '@/components/molecules/fields/FieldEmail.vue'
+import FieldPassword from '@/components/molecules/fields/FieldPassword.vue'
 
 const Cookie = process.client ? require('js-cookie') : undefined
 
@@ -14,7 +15,8 @@ export default {
 
   components: {
     ApiLogin,
-    FiedlPassword,
+    FieldEmail,
+    FieldPassword,
     ValidationObserver,
     ValidationProvider
   },
@@ -59,33 +61,22 @@ api-login(
   )
     form(@submit.prevent="handleSubmit(submit)")
       v-row
-        validation-provider(
-          class="col-12 py-0"
-          name="email"
-          rules="required|email"
-          v-slot="{ errors }"
+        field-email(
+          class="col-12"
+          label="E-mail"
+          placeholder="eve.holt@reqres.in"
+          validation-name="email"
+          validation-rules="required|email"
+          v-model="formData.email"
         )
-          v-text-field(
-            autocomplete="email"
-            label="E-mail"
-            placeholder="eve.holt@reqres.in"
-            v-model="formData.email"
-            :error-messages="errors"
-          )
 
-        validation-provider(
+        field-password(
           class="col-12 py-0"
-          name="senha"
-          placeholder="senha"
-          v-slot="{ errors }"
-          rules="required"
+          label="Senha"
+          validation-name="senha"
+          validation-rules="required"
+          v-model="formData.password"
         )
-          FiedlPassword(
-            autocomplete="password"
-            label="Password"
-            v-model="formData.password"
-            :error-messages="errors"
-          )
 
         v-col(cols="12")
           v-btn(

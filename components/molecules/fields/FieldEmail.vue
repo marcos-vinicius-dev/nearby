@@ -6,7 +6,7 @@ import {
 } from 'vee-validate'
 
 export default {
-  name: 'FieldPassword',
+  name: 'FieldEmail',
 
   components: {
     ValidationProvider
@@ -14,25 +14,17 @@ export default {
 
   mixins: [FieldMixin],
 
-  data () {
-    return {
-      showPass: false
-    }
-  },
-
   computed: {
     attrsField () {
       return {
         ...this.$attrs,
-        autocomplete: this.$attrs.autocomplete || 'password'
+        autocomplete: this.$attrs.autocomplete || 'email'
       }
     },
 
     propsField () {
       return {
-        ...this.$props,
-        appendIcon: this.showPass ? 'mdi-eye' : 'mdi-eye-off',
-        type: this.showPass ? 'text' : 'password'
+        ...this.$props
       }
     },
 
@@ -55,7 +47,6 @@ validation-provider(
     v-on="$listeners"
     :attrs="attrsField"
     :error-messages="errors"
-    @click:append="(v) => showPass = !showPass"
   )
 
 </template>
