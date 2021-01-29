@@ -29,10 +29,6 @@ v-app(dark)
     flat
     color="white"
   )
-    v-avatar(
-      size="32"
-      :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
-    )
     v-tabs(
       centered
       class="ml-n9"
@@ -63,7 +59,6 @@ v-app(dark)
             v-on="on"
           )
             v-avatar(
-              class="hidden-sm-and-down"
               color="grey darken-1 shrink"
               size="32"
             )
@@ -72,7 +67,7 @@ v-app(dark)
                 :src="data.data.avatar"
               )
 
-            div(class="px-2 text-lowercase")
+            div(class="px-2 text-lowercase hidden-sm-and-down")
               | {{ data.data.first_name }}
 
             v-icon(class="grey--text")

@@ -61,7 +61,7 @@ v-row(
         class="scroll py-0"
         cols="12"
         style="overflow-y: scroll;"
-        :style="`height: ${heightPage - 182}px`"
+        :style="$vuetify.breakpoint.desktop ? `height: ${heightPage - 182}px` : 'height: 100%'"
       )
         card-place(
           class="mb-2"

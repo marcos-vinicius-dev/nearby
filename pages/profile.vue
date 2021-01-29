@@ -18,15 +18,15 @@ export default {
 
 <template lang="pug">
 v-row(
-  class="full-height"
-  justify="center"
   align="center"
+  class="full-height mx-1"
+  justify="center"
 )
   v-col(
     cols="12"
-    sm="8"
-    md="8"
     lg="4"
+    md="8"
+    sm="8"
   )
     v-card(class="pa-5 shadow-card")
       v-col(cols="10")

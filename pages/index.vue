@@ -16,15 +16,16 @@ export default {
 
 <template lang="pug">
 v-row(
+  align="center"
   class="full-height"
   justify="center"
-  align="center"
+  class="mx-1"
 )
   v-col(
     cols="12"
-    sm="8"
-    md="8"
     lg="4"
+    md="8"
+    sm="8"
   )
     v-card(class="pa-5 shadow-card")
       v-col(cols="12")
@@ -57,6 +58,6 @@ v-row(
           class="text-none font-weight-bold"
           @click="$router.push('/register')"
         )
-          | Cadastra-se
+          | Cadastre-se
 
 </template>

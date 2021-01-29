@@ -19,6 +19,7 @@ export default {
 
   data () {
     return {
+      showPass: false,
       formData: {
         email: '',
         password: ''
@@ -82,7 +83,10 @@ api-login(
             autocomplete="password"
             label="Password"
             v-model="formData.password"
+            :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
             :error-messages="errors"
+            :type="showPass ? 'text' : 'password'"
+            @click:append="showPass = !showPass"
           )
 
         v-col(cols="12")
