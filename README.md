@@ -92,3 +92,10 @@ Os **commits** do **Git** seguem as [mensagens de commit semântico](https://gis
 - [x] Integração REQ|RES
 - [x] O deployment da aplicação deve ser realizado no Heroku
 - [x] O código da aplicação deve ser disponibilizado em um repositório do Github
+
+##  Recomendações
+
+**Login e Cadastro**
+
+Email: eve.holt@reqres.in
+Senha: cityslicka
